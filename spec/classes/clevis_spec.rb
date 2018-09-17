@@ -18,8 +18,10 @@ describe 'clevis' do
           it { is_expected.to contain_class('clevis::service').that_subscribes_to('Class[clevis::config]') }
 
           it { is_expected.to contain_package('clevis').with_ensure('present') }
+          it { is_expected.to contain_package('clevis-dracut').with_ensure('present') }
+          it { is_expected.to contain_package('clevis-luks').with_ensure('present') }
 
-          it { is_expected.to contain_service('clevis').with(
+          it { is_expected.to contain_service('clevis-luks-askpass.path').with(
             'ensure'     => 'running',
             'enable'     => 'true',
             'hasstatus'  => 'true',

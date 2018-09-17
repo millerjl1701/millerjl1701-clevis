@@ -17,7 +17,27 @@ describe 'clevis class' do
       it { should be_installed }
     end
 
-    describe service('clevis') do
+    describe package('clevis-dracut') do
+      it { should be_installed }
+    end
+
+    describe package('clevis-luks') do
+      it { should be_installed }
+    end
+
+    describe package('clevis-systemd') do
+      it { should be_installed }
+    end
+
+    describe package('jose') do
+      it { should be_installed }
+    end
+
+    describe package('luksmeta') do
+      it { should be_installed }
+    end
+
+    describe service('clevis-luks-askpass.path') do
       it { should be_enabled }
       it { should be_running }
     end

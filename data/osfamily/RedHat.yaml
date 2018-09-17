@@ -4,3 +4,4 @@ clevis::package_name:
   - 'clevis'
   - 'clevis-dracut'
   - 'clevis-luks'
+clevis::service_name: 'clevis-luks-askpass.path'
