@@ -1,7 +1,6 @@
 ---
 
 clevis::package_ensure: 'present'
-clevis::package_name: 'clevis'
 clevis::service_enable: true
 clevis::service_ensure: 'running'
 clevis::service_name: 'clevis'

@@ -11,7 +11,7 @@
 #
 class clevis (
   String                     $package_ensure = 'present',
-  String                     $package_name   = 'clevis',
+  Array                      $package_name   = [ 'clevis', 'clevis-dracut', 'clevis-luks', ],
   Boolean                    $service_enable = true,
   Enum['running', 'stopped'] $service_ensure = 'running',
   String                     $service_name   = 'clevis',
