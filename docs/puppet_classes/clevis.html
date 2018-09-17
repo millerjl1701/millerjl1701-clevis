@@ -212,8 +212,8 @@ class clevis (
   Enum[&#39;running&#39;, &#39;stopped&#39;] $service_ensure = &#39;running&#39;,
   String                     $service_name   = &#39;clevis-luks-askpass.path&#39;,
   ) {
-  case $::operatingsystem {
-    &#39;RedHat&#39;, &#39;CentOS&#39;: {
+  case $::osfamily {
+    &#39;RedHat&#39;: {
       contain clevis::install
       contain clevis::config
       contain clevis::service
@@ -223,7 +223,7 @@ class clevis (
       ~&gt; Class[&#39;clevis::service&#39;]
     }
     default: {
-      fail(&quot;${::operatingsystem} not supported&quot;)
+      fail(&quot;${::osfamily} not supported&quot;)
     }
   }
 }</pre>
