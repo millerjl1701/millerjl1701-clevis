@@ -102,7 +102,7 @@ describe 'clevis' do
         }
       end
 
-      it { expect { is_expected.to contain_package('clevis') }.to raise_error(Puppet::Error, /Nexenta not supported/) }
+      it { expect { is_expected.to contain_package('clevis') }.to raise_error(Puppet::Error, /Solaris not supported/) }
     end
   end
 end
