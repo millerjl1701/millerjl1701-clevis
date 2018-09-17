@@ -14,7 +14,7 @@ class clevis (
   Array                      $package_name   = [ 'clevis', 'clevis-dracut', 'clevis-luks', ],
   Boolean                    $service_enable = true,
   Enum['running', 'stopped'] $service_ensure = 'running',
-  String                     $service_name   = 'clevis',
+  String                     $service_name   = 'clevis-luks-askpass.path',
   ) {
   case $::operatingsystem {
     'RedHat', 'CentOS': {
