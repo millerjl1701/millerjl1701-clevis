@@ -1,6 +1,6 @@
 {
   "name": "millerjl1701-clevis",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "author": "millerjl1701",
   "summary": "Manage the installation and configuration of the clevis encryption client for NBDE.",
   "license": "Apache-2.0",
